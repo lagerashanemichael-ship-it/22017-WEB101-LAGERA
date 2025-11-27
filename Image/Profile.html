@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        .profile-card {
+            background: #fff;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #ddd;
+        }
+        h2 {
+            margin: 10px 0;
+        }
+        .bio {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .skills {
+            text-align: left;
+        }
+        .skills ul {
+            padding-left: 18px;
+        }
+        .upload {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img id="profilePhoto" src="1764194243088~2.jpg" alt="Profile Photo" />
+        <h2>Lagera, Shane Michael B.</h2>
+
+        <p class="bio">A passionate and curious coder who loves turning ideas into clean, functional, and creative solutions. Always learning, always building  one line of code at a time. Growing every day and pushing myself to become better than yesterday.</p>
+
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>JAVA</li>
+                <li>Microsoft Excel</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        function loadPhoto(event) {
+            const photo = document.getElementById('profilePhoto');
+            photo.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>
